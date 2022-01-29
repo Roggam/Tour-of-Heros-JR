@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Hero } from './hero';
-import { HEROES } from './mock-heroes';
+//mport { HEROES } from './mock-heroes';
 import { Observable, of } from 'rxjs';
 import { MessageService } from './message.service';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
@@ -63,7 +63,7 @@ updateHero(hero: Hero): Observable<any> {
   private log(message: string) {
   this.messageService.add(`HeroService: ${message}`);
 }
-private heroesUrl = 'api/heroes';  // URL to web api
+private heroesUrl = 'https://jsonplaceholder.typicode.com/todos';  // URL to web api
 
 httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
